@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panda Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+	<style>
+		@keyframes glow {
+			0%, 100% {
+				box-shadow: 0 0 8px #9333ea, 0 0 12px #085732, inset 0 0 8px rgba(147, 51, 234, 0.4);
+				border-color: #9333ea;
+			}
+			50% {
+				box-shadow: 0 0 15px #a855f7, 0 0 25px #a855f7, inset 0 0 12px rgba(168, 85, 247, 0.6);
+				border-color: #8655f7;
+			}
+		}
+		.glow-border {
+			animation: glow 1.5s ease-in-out infinite;
+		}
+	</style>
+</head>
+<body>
+    <!-- Header Start -->
+<header class="bg-white">
+
+<div class="flex items-center justify-between p-4 mx-auto max-w-7xl md:p-6">
+		<div class="ml-4 md:ml-10">
+			<a href="#">
+				<img src="img/logo.png" alt="panda logo" class="w-auto h-8 md:h-12">
+			</a>
+		</div>
+
+		<nav class="hidden mr-4 space-x-6 md:flex md:mr-10 font-poppins">
+			<a href="#" class="text-xl font-medium text-gray-700 transition-colors hover:underline hover:text-blue-600">Home</a>
+			<a href="#" class="text-xl font-medium text-gray-700 transition-colors hover:underline hover:text-red-600">About</a>
+			<a href="#" class="text-xl font-medium text-gray-700 transition-colors hover:underline hover:text-green-600">Contact</a>
+		</nav>
+
+		<div class="mr-4 md:mr-10 md:hidden">
+			<button id="mobile-menu-button" class="p-2" aria-expanded="false" aria-controls="mobile-menu">
+				<img src="img/menu-bar.png" alt="menu icon" class="w-6 h-6">
+			</button>
+		</div>
+	</div>
+
+	<div id="mobile-menu" class="hidden px-4 pb-4 border-t border-gray-200 md:hidden ">
+		<a href="#" class="block py-2 font-medium text-gray-700 transition-colors hover:underline hover:text-blue-600">Home</a>
+		<a href="#" class="block py-2 font-medium text-gray-700 transition-colors hover:underline hover:text-red-600">About</a>
+		<a href="#" class="block py-2 font-medium text-gray-700 transition-colors hover:underline hover:text-green-600">Contact</a>
+	</div>
+</header>
+<!-- Header End -->
+<script>
+	// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function(){
+var btn = document.getElementById('mobile-menu-button');
+		var menu = document.getElementById('mobile-menu');
+		if(btn && menu){
+			btn.addEventListener('click', function(){
+				var isHidden = menu.classList.contains('hidden');
+				if(isHidden){
+					menu.classList.remove('hidden');
+					btn.setAttribute('aria-expanded', 'true');
+				} else {
+					menu.classList.add('hidden');
+					btn.setAttribute('aria-expanded', 'false');
+				}
+			});
+		}
+	});
+    // Mobile menu toggle end
+</script>
+<!--Tv Start-->
+<div class="grid items-center grid-cols-1 gap-8 p-8 px-4 mx-auto mt-20 text-white bg-black border-4 border-purple-700 rounded-lg md:grid-cols-2 max-w-7xl md:rounded-2xl glow-border">
+<div class="mt-20 ml-0 md:ml-10 ">
+<h1 class="text-2xl font-bold">Samsung 32H5000F 32" HD LED Smart TV</h1>
+<h2 class="mt-4 text-xl font-semibold">Key Features</h2>
+<ul class="pl-6 mt-2 space-y-1 text-lg list-disc">
+		<li><strong>Model:</strong> 32H5000F</li>
+		<li><strong>Display:</strong> 32" HD (1366 x 768), 60Hz</li>
+		<li><strong>Picture Engine:</strong> Hyper Real</li>
+		<li><strong>Speakers:</strong> 2x 10W RMS, Dolby Sound</li>
+		<li><strong>Features:</strong> Wi-Fi 5, Bluetooth, HDR 10+, Tizen Smart TV</li>
+</ul>
+<h2 class="inline-block px-4 py-2 mt-4 text-3xl font-bold text-white rounded bg-sky-500">22,715৳</h2>
+<button class="px-6 py-3 mt-8 text-2xl font-bold text-purple-700 transition-colors bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white ml-18">BUY NOW</button>
+</div>
+<div class="flex justify-center md:justify-end">
+<img src="img/hero-tv.png" alt="Samsung TV" class="w-full h-auto mt-10 md:w-4/5">
+</div>
+</div>
+<!--Tv End-->
+<!-- Categories Start -->
+<div class="gap-5 px-4 mx-auto max-w-7xl mt-14">
+<h2 class="gap-5 mb-4 font-mono text-4xl ">Categories</h2>
+
+<div class="flex flex-col gap-6 mt-20 md:flex-row">
+
+<!-- Card 1 -->
+<div class="flex items-center justify-between w-full p-4 text-white border-2 md:w-1/3 border-sky-500 bg-sky-500 rounded-xl">
+      <h3 class="text-xl font-bold sm:text-2xl md:text-3xl">Watch</h3>
+      <img src="img/category-watch.png" alt="Watch" class="w-16 h-auto sm:w-20 md:w-24">
+</div>
+
+<!-- Card 2 -->
+<div class="flex items-center justify-between w-full p-4 text-white bg-pink-500 border-2 border-pink-500 md:w-1/3 rounded-xl">
+<h3 class="text-xl font-bold sm:text-2xl md:text-3xl">Bag</h3>
+<img src="img/category-bag.png" alt="Bag" class="w-16 h-auto sm:w-20 md:w-24">
+</div>
+
+<!-- Card 3 -->
+<div class="flex items-center justify-between w-full p-4 text-white bg-blue-700 border-2 border-blue-500 md:w-1/3 rounded-xl">
+<h3 class="text-xl font-bold sm:text-2xl md:text-3xl">Shoes</h3>
+<img 
+    src="img/shoe-1.png" 
+    alt="Shoes"
+    class="object-contain w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+  >
+</div>
+</div>
+</div>
+<!-- Categories End -->
+<!--Watch Start Here-->
+<h2 class="gap-5 px-4 mx-auto mt-20 font-mono text-4xl text-orange-500 max-w-7xl ">Watch</h2>
+ <div class="px-4 py-10 mx-auto max-w-7xl">
+        
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img/watch.jpg.webp" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Titan Quartz Date Watch – Silver Dial</h2>
+                <p class="text-center">Classic design meets modern functionality with this Titan Quartz watch for men</p>
+                <p class="text-xl font-bold">9,997.50 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img/watch2.jpg.webp" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Titan Multifunction Men’s Watch – Anthracite Dial, SS Strap</h2>
+                <p class="text-center">Titan Multifunction Anthracite Watch for Men<br>Titan Multifunction Watch</p>
+                <p class="text-xl font-bold">16,447.50 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img/watch3.jpg.webp" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Titan Karishma Analog Champagne Dial Watch for Men</h2>
+                <p class="text-center">Lightweight, elegant, and reliable—your ideal daily wear watch from Titan</p>
+                <p class="text-xl font-bold">10,051.25 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+        </div>
+    </div>
+	<!--Watch end here-->
+	<!--Bag Start Here-->
+	<h2 class="gap-5 px-4 mx-auto mt-20 font-mono text-4xl text-sky-700 max-w-7xl ">Bag</h2>
+ <div class="px-4 py-10 mx-auto max-w-7xl">
+    
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img\bag-1.png" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Shoulder Bag For Men</h2>
+                <p class="text-center">Product details of Shoulder Bag For Men & Women School Bag College Bag Backpack 17.6 Inche - Bag For Boys</p>
+                <p class="text-xl font-bold">500 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img\bag-2.png" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Outdoor Colorful Small Backpack - Bag For Boys</h2>
+                <p class="text-center">Product details of Outdoor Colorful Small Backpack - Bag For Boys</p>
+                <p class="text-xl font-bold">800 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center max-w-sm gap-4 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-56 h-56">
+                    <img src="img\bag-3.png" alt="watch" class="object-cover w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Understated MI Kids Small Backpack</h2>
+                <p class="text-center">Product details of Mi_Bag School Bag/Office Bag/Coaching Bag/BackPack Stylish Bag</p>
+                <p class="text-xl font-bold">1000 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+        </div>
+    </div>
+	<!--Bag end here-->
+	<!--Shoes Start Here-->
+	<h2 class="gap-5 px-4 mx-auto mt-20 font-mono text-4xl text-gray-900 max-w-7xl ">Shoes</h2>
+ <div class="px-4 py-10 mx-auto max-w-7xl">
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center gap-2 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-full h-56">
+                    <img src="img/shoe-1.png" alt="shoe" class="object-contain w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Stylish and Fashionable Winter</h2>
+                <p class="text-center">Designed for all-year wear, these sneakers combine style and durability.</p>
+                <p class="text-xl font-bold">1000 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center gap-2 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-full h-56">
+                    <img src="img/shoe-2.png" alt="shoe" class="object-contain w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Hot Collection Men’s Sneakers</h2>
+                <p class="text-center">Summer exclusive Converse-style sneakers for men – innovative and stylish.</p>
+                <p class="text-xl font-bold">1500 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center gap-2 p-6 mx-auto bg-white border-2 border-gray-700 rounded-xl">
+                <div class="w-full h-56">
+                    <img src="img/shoe-3.png" alt="shoe" class="object-contain w-full h-full">
+                </div>
+                <h2 class="text-xl font-bold text-center">Men’s Lightweight Breathable Sports Sneakers</h2>
+                <p class="text-center">Trendy men’s sneakers</p>
+                <p class="text-xl font-bold">2000 BDT</p>
+                <button class="px-5 py-3 mt-2 text-2xl font-bold text-orange-700 transition bg-purple-200 border-2 border-purple-200 rounded-lg buy-btn hover:bg-purple-600 hover:text-white">BUY NOW</button>
+            </div>
+
+        </div>
+    </div>
+	<!--Shoes end here-->
+
+<div class="flex flex-col items-center justify-center gap-4 mt-10 lg:flex-row mb-9">
+
+<div class="flex flex-col items-center justify-center gap-8 px-4 mt-10 lg:flex-row lg:justify-around">
+
+    <!-- Text Section -->
+    <div class="flex flex-col max-w-2xl gap-5">
+        <p class="text-2xl font-bold leading-relaxed text-center text-black lg:text-left">
+            STAY UPDATED<br>
+            Get updates on promotions, deals, and exclusive offers
+        </p>
+    </div>
+
+    <!-- Subscription Form -->
+    <div class="flex flex-col w-full max-w-md gap-4">
+        <form action="https://formspree.io/f/mblogrjr" method="POST"></form>
+        <input type="email" placeholder="Your E-mail here..." class="w-full px-4 py-3 text-xl text-black placeholder-gray-500 bg-white rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <button class="w-full px-5 py-3 font-semibold text-white transition duration-300 bg-orange-500 rounded-md shadow-md hover:bg-sky-600">
+            Send
+        </button>
+    </div>
+
+</div>
+</div>
+<!-- Footer Start -->
+<div class="w-full max-w-4xl px-6 mb-10">
+<hr class="mb-6 border-gray-200">
+<p class="text-sm text-center text-gray-400">
+Redip Biswas has received it correctly. All rights reserved © 2025
+</p>
+</div>
+<script>
+  const buyButtons = document.querySelectorAll('.buy-btn');
+  buyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = 'card.html';
+    });
+  });
+</script>
+<style>
+
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+}
+
+body::-webkit-scrollbar-track {
+    background: #0f172a; 
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #1e3a8a; 
+    border-radius: 10px;
+    border: 3px solid #0f172a;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6; 
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
+
+</body>
+</html>

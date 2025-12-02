@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Checkout — All Variants</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    .card-max { max-width: 420px; }
+    .fade { transition: all .25s ease; }
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+</style>
+</head>
+
+<body class="min-h-full text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
+
+<div class="flex flex-col items-center min-h-screen px-4 py-8">
+
+    <!-- HEADER -->
+<!--<header class="flex flex-wrap items-center justify-between w-full max-w-4xl gap-3 mb-6">
+      <div class="flex items-center gap-3">
+        <label class="text-sm">Variant:</label>
+        <select id="variant" class="p-2 border rounded dark:bg-gray-800 dark:border-gray-700">
+          <option value="exact">Exact Clone</option>
+          <option value="premium">Premium (Glass)</option>
+          <option value="minimal">Minimal</option>
+          <option value="react">React Markup</option>
+        </select>
+
+
+      </div>
+</header>-->
+
+<!-- MAIN CONTAINER -->
+<main class="flex justify-center w-full">
+
+<!-- EXACT VARIANT -->
+<article id="exact" class="w-full p-6 bg-white border shadow-lg card-max dark:bg-gray-800 rounded-2xl dark:border-gray-700 fade">
+
+        <!-- header -->
+<div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <svg class="text-gray-700 w-7 h-7 dark:text-gray-200" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 5a2 2 0 012-2h6a2 2 0 012 2v1H3V5zM3 9h12v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Panda LTD</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400">checkout.panda.com</div>
+            </div>
+          </div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">Details ▾</div>
+</div>
+
+<h2 class="font-semibold text-center">Payment Options</h2>
+ <div class="flex justify-center mt-4">
+          <button class="px-3 py-2 text-sm bg-gray-200 rounded dark:bg-gray-700">View details ▾</button>
+        </div>
+
+        <!-- email -->
+        <label class="block mt-6 text-sm font-medium">Email</label>
+        
+        <input class="w-full p-3 mt-2 border rounded dark:border-gray-700 bg-gray-50 dark:bg-gray-700" value="" />
+
+        <!-- Payment -->
+        <div class="mt-6">
+          <div class="text-sm font-medium">Payment method</div>
+
+          <label class="flex items-center gap-3 p-3 mt-3 bg-white border rounded-lg cursor-pointer dark:bg-gray-800">
+            <input type="radio" name="pm" class="w-4 h-4">
+            <span>Card</span>
+            <div class="flex items-center gap-2 ml-auto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" class="h-5">
+              <!--<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Mastercard-logo.svg" class="h-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Amex_logo.svg" class="h-5">--->
+            </div>
+          </label>
+
+          <label class="flex items-center gap-3 p-3 mt-3 bg-white border rounded-lg cursor-pointer dark:bg-gray-800">
+            <input type="radio" name="pm" class="w-4 h-4">
+            <span class="flex items-center gap-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5">
+              PayPal
+            </span>
+          </label>
+        </div>
+
+        <div class="flex items-start gap-3 mt-6">
+          <input type="checkbox" class="w-4 h-4 mt-1">
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Save my information for faster checkout.
+            Pay securely at Panda LTD and everywhere Link is accepted.
+          </p>
+        </div>
+
+        <button class="w-full py-3 mt-6 font-semibold text-white bg-blue-900 rounded-xl">
+          Subscribe
+        </button>
+
+        <p class="mt-4 text-xs text-center text-gray-500 dark:text-gray-400">
+          By subscribing, you authorize Panda to charge you according to the terms until you cancel.
+        </p>
+
+        <p class="mt-2 text-xs text-center text-gray-500 dark:text-gray-400">
+          Powered by <strong>Redip</strong>       
+        </p>
+
+        <div class="flex justify-center gap-4 mt-2 text-xs text-blue-700 dark:text-blue-400">
+          <a href="#" class="hover:underline">Terms</a>
+          <a href="#" class="hover:underline">Privacy</a>
+        </div>
+      </article>
+
+      <!-- PREMIUM GLASS -->
+      <article id="premium" class="hidden w-full p-6 border card-max rounded-2xl fade glass border-white/10">
+
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-lg font-semibold">TryHackMe LTD</div>
+          <span class="text-sm text-gray-300">checkout.stripe.com</span>
+        </div>
+
+        <h2 class="text-lg font-semibold text-center">Subscribe to TryHackMe Regular Yearly</h2>
+
+        <div class="mt-2 text-center">
+          <div class="text-4xl font-extrabold">$32.40</div>
+          <div class="mt-1 text-sm text-gray-300">
+            Then $54.00 per year starting next year
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-3">
+          <button class="px-3 py-2 text-sm rounded bg-white/10">View details ▾</button>
+        </div>
+
+        <div class="mt-6">
+          <label class="text-sm">Email</label>
+          <input value="biswasredip281@gmail.com" class="w-full p-3 mt-2 border rounded-lg bg-white/10 border-white/20">
+        </div>
+
+        <div class="mt-6">
+          <div class="text-sm font-semibold">Payment method</div>
+
+          <label class="flex items-center gap-3 p-3 mt-3 rounded-lg bg-white/10">
+            <input type="radio" name="pmp">
+            <span>Card</span>
+            <div class="flex gap-2 ml-auto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" class="h-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Mastercard-logo.svg" class="h-5">
+            </div>
+          </label>
+
+          <label class="flex items-center gap-3 p-3 mt-3 rounded-lg bg-white/10">
+            <input type="radio" name="pmp">
+            <span class="flex items-center gap-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5"> PayPal
+            </span>
+          </label>
+        </div>
+
+        <div class="flex items-start gap-3 mt-6">
+          <input type="checkbox">
+          <p class="text-sm text-gray-300">
+            Save my information for faster checkout.
+          </p>
+        </div>
+
+        <button class="w-full py-3 mt-6 font-bold text-white rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600">
+          Subscribe
+        </button>
+      </article>
+
+      <!-- MINIMAL -->
+      <article id="minimal" class="hidden w-full p-6 bg-white rounded-lg shadow card-max dark:bg-gray-800 fade">
+
+        <div class="text-center">
+          <div class="text-sm text-gray-500 uppercase">TryHackMe Regular</div>
+          <div class="mt-2 text-3xl font-bold">$32.40</div>
+          <div class="mt-1 text-xs text-gray-500">Annual — $54 next year</div>
+        </div>
+
+        <div class="mt-6">
+          <label class="text-xs text-gray-600">Email</label>
+          <input value="biswasredip281@gmail.com" class="w-full p-2 mt-2 border rounded">
+        </div>
+
+        <div class="mt-4">
+          <label class="text-xs text-gray-600">Payment</label>
+          <select class="w-full p-2 mt-2 border rounded">
+            <option>Card</option>
+            <option>PayPal</option>
+          </select>
+        </div>
+
+        <button class="w-full py-3 mt-6 text-white bg-black rounded">
+          Subscribe
+        </button>
+      </article>
+
+      <!-- REACT MARKUP -->
+      <article id="react" class="hidden w-full p-6 bg-white shadow card-max dark:bg-gray-800 rounded-2xl fade">
+
+        <div class="mb-4">
+          <div class="font-semibold">TryHackMe LTD</div>
+          <div class="text-xs text-gray-500">checkout.stripe.com</div>
+        </div>
+
+        <h3 class="text-xl font-bold">$32.40 <span class="text-sm text-gray-500">/ year</span></h3>
+        <p class="text-xs text-gray-400">Then $54 next year</p>
+
+        <form class="mt-4 space-y-3">
+          <label class="block text-sm">Email</label>
+          <input value="biswasredip281@gmail.com" class="w-full p-3 border rounded">
+
+          <div>
+            <label class="block text-sm">Payment method</label>
+            <div class="flex gap-4 mt-2">
+              <label class="flex items-center gap-2"><input type="radio" name="rpay"> Card</label>
+              <label class="flex items-center gap-2"><input type="radio" name="rpay"> PayPal</label>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full py-2 text-white bg-blue-800 rounded">
+            Subscribe
+          </button>
+        </form>
+      </article>
+
+    </main>
+
+    <!--<footer class="w-full max-w-4xl mt-6 text-sm text-center text-gray-500">
+      Tip: Use the Variant selector to switch designs. All variants are responsive and support dark mode.
+    </footer>-->
+
+</div>
+
+  <!-- JS -->
+  <script>
+    const select = document.getElementById('variant');
+    const views = ['exact', 'premium', 'minimal', 'react'];
+
+    function showView(name) {
+      views.forEach(v => {
+        document.getElementById(v).classList.toggle('hidden', v !== name);
+      });
+    }
+
+    select.addEventListener('change', e => showView(e.target.value));
+    showView(select.value);
+
+    const dT = document.getElementById('darkToggle');
+    dT.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      dT.textContent = document.documentElement.classList.contains('dark')
+        ? 'Light'
+        : 'Dark';
+    });
+  </script>
+
+</body>
+</html>
